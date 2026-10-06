@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>username edit</title>
+</head>
+<body>
+   <h3>Enter Password below to delete the data</h3>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+        <tr>          
+            <td><%=result[0].id%></td>
+            <td><%=result[0].username%></td>
+            <td><%=result[0].email%></td>
+        </tr>
+
+        
+        <form action="/userdata/<%=result[0].id%>?_method=PATCH" method = "post">
+            Enter password:<input type="password" placeholder="Enter Password" name="pass">
+            <br>
+            New username<input type="text" placeholder="Enter new username" name="username">
+            <br>
+            <button>Submit </button>
+        </form>
+    
+</body>
+</html>

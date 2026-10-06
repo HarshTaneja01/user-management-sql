@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete data</title>
+</head>
+<body>
+    <h3>Enter Password below to delete the data</h3>
+    <form action="/userdata/<%=result[0].id%>?_method=DELETE" method="Post">
+        <input type="Password" placeholder="Enter password" name = "pass">
+        <button>Submit</button>
+    </form>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Username</td>
+            <td>Email</td>
+        </tr>
+        <tr>
+            <td><%=result[0].id%></td>
+            <td><%=result[0].username%></td>
+            <td><%=result[0].email%></td>
+        </tr>
+    </table>
+
+</body>
+</html>
